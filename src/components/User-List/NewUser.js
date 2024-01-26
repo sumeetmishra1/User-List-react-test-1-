@@ -2,9 +2,10 @@ import './NewUser.css'
 const User=(props)=>{
     const Name=props.data.name;
     const Age=props.data.age;
+    const College=props.data.college;
     return(
         <div className="list-item">
-            <li>{Name} ({Age})</li>
+            <li>{Name} ({Age}) {College}</li>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-
+import ReactDOM from 'react-dom';
 import { useState } from 'react';
 import './App.css';
 import InputForm from './components/Input-form/InputForm'
@@ -30,7 +30,8 @@ function App() {
   return (
     <div className='body' >
      <InputForm onSubmitForm={formsubmit}/>
-     {dialougebox}
+    {ReactDOM.createPortal(dialougebox,document.getElementById('modal-root'))}
+    
      <UserContainer users={newUser}/>
     </div>
   );
